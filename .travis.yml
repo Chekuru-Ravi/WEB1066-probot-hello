@@ -21,7 +21,7 @@ after_success:
     if [ "${NPM_TARGET}" = "test" ]; then
       docker tag probot-hello probot-hello:$(git rev-parse HEAD);
     else
-      echo "skipping after_success step."
+      echo "skipping after_success step.";
     fi;
     docker images;
     set +x +v;
